@@ -1,0 +1,2 @@
+SEPARATOR = '\r\n'
+SEPARATOR_BINARY = b'\r\n'
