@@ -4,7 +4,7 @@
 
 This is a simple caching service with similarities to Memcached. It it able store custom objects by key. Supported commands are: `set`, `get`, and `del`. It is a concurrent, single-threaded program written in Python. The program does not depend on any third-party libraries, it uses only the standard library. Upon running it acts as a server that accepts TCP connections.
 
-The cache supports setting a limit to the number of items stored based on LRU strategy. It also features TTL support for added/replaced items. Item keys are strings, and item values are stored as bytes - can be any type of data.
+The cache supports setting a limit to the number of items stored based on LRU strategy. It also features TTL support for added/replaced items. The item keys are strings, and the item values are stored as bytes - can be any type of data.
 
 ## Configuration and launch
 
@@ -120,4 +120,4 @@ Bundled tests:
 
 * `src/test_commands.py` - basic CRUD test.
 * `src/test_stress.py` - inserts and then deleted many items.
-* `src/test_binary.py` - stores binary file, than retrieves it and compares with the original.
+* `src/test_binary.py` - stores binary file, then retrieves it and compares with the original.
