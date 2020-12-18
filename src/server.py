@@ -47,6 +47,10 @@ class Server:
                 response: Union[str, bytes] = ''
                 try:
                     message = data.decode()
+                    if len(message.strip()) == 0:
+                        # ignore empty messages
+                        continue
+
                     command_or_error = parse_command(message)
                     if command_or_error.error:
                         response = command_or_error.error
